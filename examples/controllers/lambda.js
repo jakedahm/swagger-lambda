@@ -1,3 +1,3 @@
 const swaggerLambda = require('../../index');
 
-exports.invoke = swaggerLambda.invoke;
+exports.invoke = swaggerLambda;
