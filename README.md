@@ -13,7 +13,7 @@ npm install --save swagger-lambda
 ```js
 const swaggerLambda = require('swagger-lambda');
 
-module.exports = swaggerLambda;
+exports.invoke = swaggerLambda;
 ```
 
 ## Configuration
@@ -58,7 +58,7 @@ In this example we will use Express and Swagger Tools to scaffold our API from o
 ```js
 const swaggerLambda = require('swagger-lambda');
 
-module.exports = swaggerLambda;
+exports.invoke = swaggerLambda;
 ```
 
 **swagger.yml**
