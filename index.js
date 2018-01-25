@@ -4,7 +4,7 @@ const debug = require('debug')('swagger-lambda');
 const lambda = new AWS.Lambda();
 const { AWS_LAMBDA_ALIAS = '$LATEST', AWS_LAMBDA_DRYRUN = false } = process.env;
 
-exports.invoke = (req, res, next) => {
+module.exports = (req, res, next) => {
   const { operation, params } = req.swagger;
   const alias = operation['x-lambda-function-alias'] || AWS_LAMBDA_ALIAS;
   const arn = operation['x-lambda-function-name'];
