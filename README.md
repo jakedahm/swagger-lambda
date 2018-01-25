@@ -24,9 +24,9 @@ See example for a more detailed implementation. The swagger-lambda controller ca
 
 - **x-swagger-router-controller**: Name of lambda controller. Example `lambda`
 - **operationId**: Name of method to call. Example `invoke`
-- **x-lambda-alias**: Controls which version of your lambda function to invoke. Default **$LATEST** 
+- **x-lambda-function-name**: **Required** Name or ARN of the lambda function to invoke. Example `getGreeting`
+- **x-lambda-function-alias**: Controls which version of your lambda function to invoke. Default **$LATEST** 
 - **x-lambda-dryrun**: Invoke the function call without executing the lambda function. Good for testing. Default **false**
-- **x-lambda-function-name**: Name or ARN of the lambda function to invoke. Example `getGreeting`
 
 ### swagger-lambda ENV variables
 
