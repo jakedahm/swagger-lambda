@@ -1,5 +1,5 @@
 {
-  "name": "swagger-lambda-controller",
+  "name": "swagger-lambda",
   "version": "1.0.0",
   "description": "Swagger Lambda Controller is an alternative solution to AWS API Gateway's lambda invokation built on NodeJS, Express, and the Swagger Tools Middleware",
   "main": "index.js",
