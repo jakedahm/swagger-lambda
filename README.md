@@ -1,6 +1,6 @@
-# swagger-lambda-controller
+# swagger-lambda
 
-Swagger Lambda Controller is an alternative solution to AWS API Gateway's lambda invokation built on NodeJS, Express, and the Swagger Tools Middleware.
+Swagger Lambda is an alternative solution to AWS API Gateway's lambda invokation built on NodeJS, Express, and the Swagger Tools Middleware.
 
 ## Installation
 
