@@ -1,0 +1,36 @@
+{
+  "name": "swagger-lambda-controller",
+  "version": "1.0.0",
+  "description": "Swagger Lambda Controller is an alternative solution to AWS API Gateway's lambda invokation built on NodeJS, Express, and the Swagger Tools Middleware",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./examples/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakedahm/swagger-lambda-controller.git"
+  },
+  "keywords": [
+    "Lambda",
+    "Swagger",
+    "Serverless",
+    "NodeJS"
+  ],
+  "author": "Jake Dahm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jakedahm/swagger-lambda-controller/issues"
+  },
+  "homepage": "https://github.com/jakedahm/swagger-lambda-controller#readme",
+  "dependencies": {
+    "aws-sdk": "^2.186.0",
+    "babel-eslint": "^8.2.1",
+    "debug": "^3.1.0",
+    "eslint": "^4.16.0"
+  },
+  "devDependencies": {
+    "express": "^4.16.2",
+    "js-yaml": "^3.10.0",
+    "swagger-tools": "^0.10.3"
+  }
+}

@@ -1,0 +1,45 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Swagger Lambda Example
+basePath: /api/v1
+
+schemes:
+  - https
+  - http
+
+produces:
+  - application/json
+
+paths:
+  /hello:
+    get:
+      x-swagger-router-controller: lambda
+      x-lambda-function-name: getGreeting
+      operationId: invoke
+      summary: Returns greeting
+      parameters:
+        - name: name
+          in: query
+          type: string
+      responses:
+        200:
+          description: Success
+    post:
+      x-swagger-router-controller: lambda
+      x-lambda-function-name: createGreeting
+      x-lambda-dryrun: true
+      operationId: invoke
+      summary: Creates greeting
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+      responses:
+        200:
+          description: Success
