@@ -10,18 +10,17 @@ module.exports = (req, res, next) => {
   const arn = operation['x-lambda-function-name'];
   const dyrRun = AWS_LAMBDA_DRYRUN || operation['x-lambda-dryrun'];
   const payload = {};
-  const { body, ...rest } = params;
 
   // Map the swagger params to the payload object
-  Object.keys(rest).forEach(key => {
-    if (typeof params[key].value !== 'undefined') {
+  Object.keys(params).forEach(key => {
+    if (typeof params[key].value !== 'undefined' && key !== 'body') {
       payload[key] = params[key].value;
     }
   });
 
   // Extend the payload object with the contents of the request body.
   // This moves the body param to the root of the request payload
-  const lambdaPayload = Object.assign({}, payload, body ? body.value : {});
+  const lambdaPayload = Object.assign({}, payload, params.body ? params.body.value : {});
   const lambdaParams = {
     FunctionName: arn,
     Payload: new Buffer(JSON.stringify(lambdaPayload)),
@@ -30,7 +29,7 @@ module.exports = (req, res, next) => {
   };
 
   debug('Lambda.invoke() request');
-  debug(JSON.stringify({ ...lambdaParams, Payload: lambdaPayload }, null, 2));
+  debug(JSON.stringify(Object.assign({}, lambdaParams, { Payload: lambdaPayload }), null, 2));
 
   lambda.invoke(lambdaParams, (err, data) => {
     if (err) return next(err);
