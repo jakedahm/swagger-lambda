@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jakedahm/swagger-lambda-controller.git"
+    "url": "git+https://github.com/jakedahm/swagger-lambda.git"
   },
   "keywords": [
     "Lambda",
@@ -22,9 +22,9 @@
   "author": "Jake Dahm",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jakedahm/swagger-lambda-controller/issues"
+    "url": "https://github.com/jakedahm/swagger-lambda/issues"
   },
-  "homepage": "https://github.com/jakedahm/swagger-lambda-controller#readme",
+  "homepage": "https://github.com/jakedahm/swagger-lambda#readme",
   "engines": {
     "node": ">=6.10.3"
   },
