@@ -1,3 +1,7 @@
+[![npm](https://img.shields.io/npm/v/swagger-lambda.svg)](https://www.npmjs.com/package/swagger-lambda)
+[![npm](https://img.shields.io/npm/l/swagger-lambda.svg)](https://github.com/jakedahm/swagger-lambda/blob/master/LICENSE)
+[![npm](https://img.shields.io/npm/dt/swagger-lambda.svg)](https://www.npmjs.com/package/swagger-lambda)
+
 # swagger-lambda
 
 Swagger Lambda is an alternative solution to AWS API Gateway's lambda invokation built on NodeJS, Express, and the Swagger Tools Middleware.
